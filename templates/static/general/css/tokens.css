@@ -1,0 +1,67 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+  
+nav a {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+  
+/* Variáveis globais */
+:root {
+    /* Cores principais */
+    --color-primary: #f2dab3;
+    --color-secondary: #e7bd87;
+    --color-dark: #333;
+    --color-light: #fff;
+    --color-muted: #777;
+  
+    /* Tipografia */
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --font-animated: "Great Vibes", cursive;
+  
+    /* Espaçamentos */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+
+/* Bordas */
+    --border-radius: 8px;
+
+/* Sombras */
+    --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+@media screen and (max-width: 600px) {
+    .section-confirmar {
+        padding: 20px;
+        margin: 40px 15px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .section-confirmar button {
+        width: 100%;
+    }
+}

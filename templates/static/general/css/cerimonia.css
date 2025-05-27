@@ -1,0 +1,98 @@
+@media (max-width: 768px) {
+    .titulo-cerimonia {
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+  
+    .banner-igreja {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .igreja {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .local iframe {
+      width: 100% !important;
+      height: 300px;
+    }
+  
+    .info-local {
+      font-size: 16px;
+      padding: 0 10px;
+      text-align: left;
+    }
+  
+    .titulo-local {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .info-local p {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+}
+
+.titulo-cerimonia{
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #e7bd87;
+  font-family: "Great Vibes", cursive;
+  font-size: 6rem;
+}
+
+.cerimonia-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.banner-igreja,
+.local,
+.info-local {
+  align-items: center;
+  justify-content: center;
+}
+
+.local {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  padding-bottom: 20px;
+}
+
+.banner-igreja, .igreja {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.titulo-local {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e7bd87;
+  font-family: "Great Vibes", cursive;
+  font-size: 4rem;
+}
+
+.info-local p {
+  text-align: center;
+  font-size: 18px;
+}

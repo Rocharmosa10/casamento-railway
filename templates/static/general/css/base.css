@@ -1,0 +1,122 @@
+/* Cabeçalho */
+.header-evento {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f9efdb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Container centralizado e responsivo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2px 2px;
+    box-sizing: border-box;
+}
+
+/* Navegação */
+.nav-sidebar {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar no mobile */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+    font-size: 14px;
+    display: block;
+}
+
+/* Hover */
+.nav-sidebar a:hover {
+    color: #e7bd87;
+}
+
+/* Rodapé */
+.footer-evento {
+    background-color: #f9efdb;
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar no mobile */
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 10px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9rem;
+    gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Links do rodapé */
+.footer-evento a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Responsividade específica para telas menores */
+@media (max-width: 600px) {
+    .nav-sidebar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .footer-evento {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Botão Toggler */
+
+/* Oculta botão no desktop */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+  
+  /* Exibe o botão no mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-sidebar {
+      display: none; /* começa escondido */
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background-color: #f9efdb;
+      padding: 10px 0;
+      position: absolute;
+      top: 60px; /* altura do header */
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+  
+    .nav-sidebar.active {
+      display: flex;
+    }
+}

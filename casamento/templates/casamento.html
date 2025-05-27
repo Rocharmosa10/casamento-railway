@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <section id="home" class="countdown-section">
+    <div id="countdown-box">
+
+      <div class="count-time">
+        <span></span>
+        <img src="{% static 'img/logo-data-igreja.png' %}" alt="foto do casal">
+      </div>
+      
+      <div class="count-time">
+        <span id="days"></span>
+        <p>Dias</p>
+      </div>
+
+      <div class="count-time">
+        <span id="hours"></span>
+        <p>Horas</p>
+      </div>
+
+      <div class="count-time">
+        <span id="minutes"></span>
+        <p>Minutos</p>
+      </div>
+      
+      <div class="count-time">
+        <span id="seconds"></span>
+        <p>Segundos</p>
+      </div>
+
+    </div>
+  </section>
+
+  {% include "site/casal.html" %}
+  {% include "site/cerimonia.html" %}
+  {% include "site/presentes.html" %}
+  {% include "site/confirmar-presenca.html" %}
+
+{% endblock %}
