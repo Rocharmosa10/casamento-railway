@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from decouple import config, Csv  # ✅ Para ler variáveis de ambiente
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,8 +29,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Mantém pra servir static files
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Mantém pra servir static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -94,8 +94,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 # WhiteNoise settings
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # ✅ Compressão e cache busting no Railway
 
-# Default primary key field type
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Envio de e-mails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
