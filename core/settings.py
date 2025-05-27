@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from decouple import config
+from decouple import config, Csv  # ✅ Para ler variáveis de ambiente
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,11 +11,7 @@ SECRET_KEY = config('SECRET_KEY')  # ✅ Boa prática: usa variável de ambiente
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)  # ✅ Controla via variável de ambiente na Railway
 
-ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS',
-    default='127.0.0.1,localhost',
-    cast=lambda v: [s.strip() for s in v.split(',')]
-)  # ✅ Pode começar assim, depois troca pelo domínio da Railway
+ALLOWED_HOSTS = ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv()) # ✅ Pode começar assim, depois troca pelo domínio da Railway
 
 # Application definition
 INSTALLED_APPS = [
@@ -102,7 +98,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config('EMAIL')  # ✅ Mantém via env
-EMAIL_HOST_PASSWORD = config('SENHA')  # ✅ Mantém via env
-DEFAULT_FROM_EMAIL = config('EMAIL')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')  # ✅ Mantém via env
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  # ✅ Mantém via env
+DEFAULT_FROM_EMAIL = config('EMAIL_HOST_USER')
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
