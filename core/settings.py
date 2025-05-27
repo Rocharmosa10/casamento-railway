@@ -11,7 +11,7 @@ SECRET_KEY = config('SECRET_KEY')  # ✅ Boa prática: usa variável de ambiente
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)  # ✅ Controla via variável de ambiente na Railway
 
-ALLOWED_HOSTS = ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv()) # ✅ Pode começar assim, depois troca pelo domínio da Railway
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv()) # ✅ Pode começar assim, depois troca pelo domínio da Railway
 
 # Application definition
 INSTALLED_APPS = [
