@@ -1,0 +1,34 @@
+.secao-casal {
+    background-color: #f9efdb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container-casal img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.foto-casal {
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.texto-casal {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 40px 20px; /* Espaço interno */
+}
+
+.texto-casal p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte limpa */
+    font-size: 18px; /* Tamanho confortável */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    margin-bottom: 16px; /* Espaço entre os parágrafos */
+    text-align: justify; /* Justifica os textos */
+    color: #333333; /* Cor agradável, escura e legível */
+    max-width: 800px;
+}

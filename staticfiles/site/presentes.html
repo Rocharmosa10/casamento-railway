@@ -1,0 +1,31 @@
+{% load static %}
+
+{% block content %}
+    <section id="presentes" class="presentes-section">
+        <!-- Exibição do menu de categorias -->
+        <div id="menu-categorias" class="menu-categorias"></div>
+
+        <!-- Lista de presentes por categoria -->
+        <div id="lista-presentes" class="lista-presentes"></div>
+
+        <!-- Área do presente selecionado -->
+        <div id="compra" class="escondido">
+            <h2>Você escolheu: <span id="presente-selecionado"></span></h2>
+            <img id="imagem-presente" src="" alt="Imagem do presente" class="imagem-do-presente" />
+            <p>Valor: R$ <span id="valor"></span></p>
+            <textarea id="recado" placeholder="Escreva uma mensagem para os noivos..."></textarea>
+            <button onclick="finalizarCompra()">Finalizar compra</button>
+        </div>
+
+        <!-- Mensagem de confirmação -->
+        <div id="confirmacao" class="escondido">
+            <p>🎉 Presente comprado com sucesso!</p>
+            <p>✅ Obrigado pela sua contribuição.</p>
+            <p>🔑 Chave Pix: 
+                <span id="chave-pix"></span>
+                <button id="copiar-pix" style="margin-left:10px; display:none;">Copiar</button> <!-- Botão criado -->
+            </p>
+            <button onclick="recarregarPresentes()">Voltar à lista</button>
+        </div>
+    </section>
+{% endblock %}
