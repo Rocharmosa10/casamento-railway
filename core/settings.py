@@ -19,7 +19,7 @@ ALLOWED_HOSTS = config(
 
 # NOVO: Configuração para CSRF_TRUSTED_ORIGINS
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-47eac.up.railway.app',
+    'https://web-production-47aec.up.railway.app',
 ]
 
 # Application definition
