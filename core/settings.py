@@ -17,6 +17,11 @@ ALLOWED_HOSTS = config(
     cast=lambda v: [s.strip() for s in v.split(',')]
 ) # ✅ Pode começar assim, depois troca pelo domínio da Railway
 
+# NOVO: Configuração para CSRF_TRUSTED_ORIGINS
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-47eac.up.railway.app',
+]
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
